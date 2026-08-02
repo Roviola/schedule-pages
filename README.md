@@ -2,7 +2,7 @@
 
 > AI 驱动的个人日程管理工具 — 从日历规划到习惯打卡，从目标拆解到灵感收集，一个工作台搞定。
 
-[🖥 在线体验](https://Roviola.github.io/schedule-pages/)
+[🖥 在线体验](https://Roviola.github.io/schedule-pages/) ｜ [⬇ 下载到本地使用](https://github.com/Roviola/schedule-pages)
 
 ---
 
@@ -37,15 +37,14 @@
 ## 技术栈
 
 - **前端**：HTML + CSS + JavaScript，纯单页应用
-- **存储**：localStorage（本地） + Supabase（云同步）
+- **存储**：localStorage，纯本地，无需联网
 - **部署**：GitHub Pages
-- **AI 协作**：四阶段推进 — 需求拆解 → 信息架构 → 模块开发 → 调试迭代
 
 ## 关于这个项目
 
-这个日程工作台是我用 AI 辅助完成的一个全栈前端作品。从产品定位到每个模块的交互细节，我负责所有的设计决策和功能取舍，AI 帮我提高了从想法到可运行页面的效率。
+这个日程工作台是我用 AI 辅助完成的一个全栈前端作品。所有数据存储在浏览器本地，不需要注册、不需要联网，下载 `index.html` 到电脑或手机就能直接用。
 
-## 本地运行
+## 下载到本地
 
 ```bash
 git clone https://github.com/Roviola/schedule-pages.git
@@ -53,3 +52,5 @@ cd schedule-pages
 # 直接打开 index.html，或用本地服务器
 npx serve .
 ```
+
+也可以直接下载 `index.html` 文件，双击打开就能用。

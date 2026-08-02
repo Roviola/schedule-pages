@@ -483,30 +483,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .mn-map-act:hover{opacity:1;}
 .gm-act{cursor:pointer;}
 .gm-act:hover circle{opacity:.85;}
-/* ===== account / cloud sync ===== */
-.account{margin-top:14px;padding:0 4px;}
-.acc-btn{width:100%;padding:9px 12px;border-radius:var(--r-sm);background:var(--peach);color:var(--ink);font-weight:700;font-size:13px;}
-.acc-btn:hover{background:var(--peach-deep);color:#fff;}
-.acc-login{box-shadow:var(--shadow);}
-.acc-tip{margin-top:6px;font-size:11px;color:var(--ink-2);line-height:1.4;}
-.acc-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px;}
-.acc-mail{font-size:12px;color:var(--ink);font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-.acc-state{font-size:11px;color:var(--peach-deep);font-weight:700;flex:0 0 auto;}
-#authModal{position:fixed;inset:0;z-index:1300;display:none;align-items:center;justify-content:center;background:rgba(41,37,36,.32);backdrop-filter:blur(2px);}
-.auth-card{width:340px;max-width:92vw;background:var(--card);border-radius:var(--r-md);padding:24px;box-shadow:var(--shadow-2);}
-.auth-card h3{font-family:var(--serif);font-size:20px;margin-bottom:4px;}
-.auth-sub{font-size:12px;color:var(--ink-2);margin-bottom:16px;line-height:1.5;}
-.auth-card input{width:100%;padding:10px 12px;border:1px solid var(--bd);border-radius:var(--r-sm);font-size:14px;margin-bottom:10px;outline:none;background:var(--cream);}
-.auth-card input:focus{border-color:var(--peach-deep);}
-.auth-actions{display:flex;gap:8px;margin-top:6px;}
-.auth-actions button{flex:1;padding:10px;border-radius:var(--r-sm);font-weight:700;font-size:13px;}
-.auth-signin{background:var(--peach);color:var(--ink);}
-.auth-signin:hover{background:var(--peach-deep);color:#fff;}
-.auth-signup{background:var(--card);border:1px solid var(--bd);color:var(--ink);}
-.auth-signup:hover{background:var(--cream);}
-.auth-cancel{background:var(--cream);color:var(--ink-2);}
-.auth-cancel:hover{background:var(--cream-d);}
-.auth-msg{font-size:12px;color:var(--peach-deep);min-height:16px;margin-top:8px;}
 </style>
 </head>
 <body>
@@ -537,29 +513,11 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
       <div class="tw-date" id="tw-date">—</div>
       <div class="tw-count" id="tw-count">0 个安排</div>
     </div>
-    <div class="account" id="account-area"></div>
   </aside>
   <main class="main"></main>
 </div>
 <div class="overlay" id="overlay"><div class="modal"></div></div>
 <div class="lightbox" id="lightbox"><span class="lb-close" id="lb-close">×</span><img id="lb-img" src="" alt=""></div>
-<div id="authModal">
-  <div class="auth-card">
-    <h3>登录 / 同步</h3>
-    <div class="auth-sub">登录后，你的日程、目标、灵感等数据将在手机和电脑之间自动同步；不登录则仅保存在本机。</div>
-    <input id="auth-email" type="email" placeholder="邮箱" autocomplete="email">
-    <input id="auth-pwd" type="password" placeholder="密码（至少 6 位）" autocomplete="current-password">
-    <div class="auth-actions">
-      <button class="auth-signin" id="auth-signin">登录</button>
-      <button class="auth-signup" id="auth-signup">注册</button>
-    </div>
-    <div class="auth-actions">
-      <button class="auth-cancel" id="auth-cancel">取消</button>
-    </div>
-    <div class="auth-msg" id="auth-msg"></div>
-  </div>
-</div>
-
 <div class="del-mask" id="delMask">
   <div class="del-card">
     <h3>确认删除吗？</h3>
@@ -635,8 +593,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 </div>
 <div class="toast-wrap" id="toastWrap"></div>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="sync.js"></script>
 <script>
 const STORE_KEY='viola_schedule_v1';
 const CATS={
