@@ -2,7 +2,7 @@
 
 > AI 驱动的个人日程管理工具 — 从日历规划到习惯打卡，从目标拆解到灵感收集，一个工作台搞定。
 
-[🖥 在线体验](https://Roviola.github.io/schedule-pages/) ｜ [⬇ 下载到本地使用](https://github.com/Roviola/schedule-pages)
+[🖥 在线体验](https://Roviola.github.io/schedule-pages/) ｜ [⬇ 下载到本地使用](https://github.com/Roviola/schedule-pages/archive/refs/heads/gh-pages.zip)
 
 ---
 
